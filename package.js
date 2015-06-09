@@ -1,7 +1,7 @@
 Package.describe({
   summary: "FranceConnect OAuth flow",
   version: "0.1.0",
-  name: "gvisca:franceconnect",
+  name: "gvisca75:franceconnect",
   git: "https://github.com/gvisca/franceconnect.git"
 });
 

@@ -48,12 +48,11 @@ var getAccessToken = function (query) {
         response = HTTP.post(
             "https://fcp.integ01.dev-franceconnect.fr/api/v1/token", {
                 headers: {Accept: 'application/json'}, params: {
-                    code: query.code,
-                    client_id: config.clientId,
-                    client_secret: OAuth.openSecret(config.secret),
                     grant_type: 'authorization_code',
                     redirect_uri: OAuth._redirectUri('franceconnect', config),
-                    state: query.state
+                    client_id: config.clientId,
+                    client_secret: OAuth.openSecret(config.secret),
+                    code: query.code
                 }
             });
     } catch (err) {
